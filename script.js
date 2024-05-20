@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Function to create and append a new element
+  // create & append novo elemento
   function createElementWithClass(type, className, parent) {
     const element = document.createElement(type);
     if (className) element.classList.add(className);
@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     return element;
   }
 
-  // Header
+  // header
   const header = document.querySelector('header');
   const h1 = createElementWithClass('h1', null, header);
   h1.textContent = 'Squirtle';
 
-  // Navigation
+  // navegação
   const nav = document.querySelector('nav');
   const ul = createElementWithClass('ul', null, nav);
 
@@ -29,13 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const li = createElementWithClass('li', null, ul);
     const a = createElementWithClass('a', null, li);
     a.href = `#${section.id}`;
-    a.textContent = `| ${section.label} |`;
+    a.textContent = `${section.label}`;
   });
 
-  // Main Content
+  // main
   const main = document.querySelector('main');
 
-  // Info Squirtle Section
+  // squirtle section
   const infoSquirtle = createElementWithClass('section', null, main);
   infoSquirtle.id = 'info-squirtle';
   infoSquirtle.setAttribute('aria-labelledby', 'info-squirtle-label');
